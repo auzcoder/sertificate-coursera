@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-# -labaratoriya
+# 1-labaratoriya
 # def index(request):
 #     return HttpResponse("Hello, world. 3dacafbf is the polls index.")
 
