@@ -1,8 +1,19 @@
-# polls/urls.py
-from django.urls import path
-from .views import index
+# # polls/urls.py
+# from django.urls import path
+# from .views import index
 
+# urlpatterns = [
+#     path('', index, name='index'),
+#     # Add more URL patterns for the polls app as needed
+# ]
+from django.urls import path
+
+from . import views
+
+app_name = 'polls'
 urlpatterns = [
-    path('', index, name='index'),
-    # Add more URL patterns for the polls app as needed
+    path('', views.IndexView.as_view(), name='index'),
+    path('<int:pk>/', views.DetailView.as_view(), name='detail'),
+    path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
+    path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
