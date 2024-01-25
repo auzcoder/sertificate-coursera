@@ -25,4 +25,5 @@ urlpatterns = [
     # path('polls/', include('polls.urls')),
     # path('', include('polls.urls')),
     path('polls/', include('polls.urls', namespace='polls')),
+    path('', include('hello.urls', namespace='hello')),
 ]
