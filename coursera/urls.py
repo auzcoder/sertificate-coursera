@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 1-labaratoriya
     # path('polls/', include('polls.urls')),
-    path('', include('polls.urls')),
+    # path('', include('polls.urls')),
 ]
